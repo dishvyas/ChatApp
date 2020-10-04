@@ -1,0 +1,18 @@
+<div class="wrapper">
+    <header>
+      <mat-toolbar>
+        <span class="space"></span>
+        <!-- <div *ngIf="service.loggedIn()">  
+        <h4 id="off" mat-button *ngIf="noInternetConnection">Offline</h4>  
+        <h4 mat-button *ngIf="!noInternetConnection">Online</h4>         
+        </div> -->
+        <a routerLink="/" mat-button *ngIf="!service.loggedIn()">Login</a>
+        <a routerLink="/" mat-button *ngIf="service.loggedIn()" (click)="service.loggedOut()">Logout</a>
+      </mat-toolbar>
+    </header>
+</div>
+  <router-outlet></router-outlet>
+<div>
+</div>
+   
+  

@@ -1,0 +1,18 @@
+<div class="chat-messages">
+    <div class="chat-messages-show-container">
+    <div id="offline" *ngIf="noInternetConnection">
+        <img src="assets/images/dot.jpeg" alt="Wifi not connecred" />
+        <h4 id="off" mat-button >Offline</h4> 
+    </div>
+    <div id="online">
+        <img src="assets/images/green1.png" alt="Wifi Connecred" /> 
+    <h4 mat-button *ngIf="!noInternetConnection">Online</h4>
+    </div>  
+    <ul class="chat-messages-show-list">
+      </ul>
+    </div>
+    <div class="chat-messages-create-container"> 
+      <input class="chat-messages-create-input" placeholder="Type Message" type="text" [(ngModel)]="message">
+      <button  class="chat-messages-create-button" (click)="SendMessage()"> Send </button>
+    </div>
+ </div>
